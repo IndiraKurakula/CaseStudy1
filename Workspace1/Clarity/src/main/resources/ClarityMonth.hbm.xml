@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+              "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+              "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping>
+
+	<class name="beans.ClarityMonth" table="clarity_month">
+		<id name="clarityMonthId" column="claritymonthId" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<property name="AssociateID" column="AssociateID" type="int" />
+		<property name="HCSCID" column="HCSCID" type="string" />
+		<property name="Month" column="Month" type="string" />
+		<property name="TotalHours" column="TotalHours" type="int" />
+		<property name="Rate" column="Rate" type="float" />
+		<property name="Revenue" column="Revenue" type="float" />
+
+
+	</class>
+</hibernate-mapping>

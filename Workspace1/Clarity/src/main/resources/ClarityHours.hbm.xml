@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+              "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+              "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping>
+
+	<class name="beans.ClarityHours" table="clarity_hours">
+
+		<id name="clarityhoursid" column="clarityhoursid" type="int">
+		
+		 <generator class="increment"></generator>  
+</id>
+
+		<property name="AssociateID" column="AssociateID" type="int" />
+		<property name="HCSCID" column="HCSCID" type="string" />
+		<property name="Date" column="Date" type="string" />
+		<property name="Month" column="Month" type="int" />
+		<property name="Hours" column="Hours" type="int" />
+		<property name="BacklogMonth" column="BacklogMonth" type="string" />
+		<property name="BacklogHours" column="BacklogHours" type="int" />
+		<property name="BacklogAmount" column="BacklogAmount" type="string" />
+		<property name="Revenue" column="Revenue" type="string" />
+		<property name="Year" column="Year" type="int" />
+
+	</class>
+</hibernate-mapping>

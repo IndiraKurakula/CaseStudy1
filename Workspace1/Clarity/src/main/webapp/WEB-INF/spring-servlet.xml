@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	 xmlns:aop="http://www.springframework.org/schema/aop"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config/>
+	
+<mvc:annotation-driven />
+	<context:component-scan base-package="controllers,beans,dao" />
+	
+
+<bean id="associate" class="beans.AssociateDetails"/>
+<bean id="clarityhours" class="beans.ClarityHours"/>
+<bean id="claritymonth" class="beans.ClarityMonth"/>
+<bean id="userdetails" class="beans.UserDetails"/>
+<bean id="associaterate" class="beans.AssociateRate" />
+
+<bean id="associatedao" class="dao.AssociateDao" />
+<bean id="rolesdao" class="dao.RolesDao" />
+<bean id="clarityhoursdao" class="dao.ClarityHoursDao" />
+
+
+<!-- <bean id="sessionfactory" class="exceptions.SessionFactory1" /> -->
+
+	<mvc:default-servlet-handler />
+
+	<!-- Enable annotation-based controllers using @Controller annotations -->
+	<bean id="annotationUrlMapping"
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="order" value="0" />
+	</bean>
+
+	<bean id="controllerClassNameHandlerMapping"
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="order" value="1" />
+	</bean>
+
+	<bean id="annotationMethodHandlerAdapter"
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+ <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />  
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/view/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+</beans>

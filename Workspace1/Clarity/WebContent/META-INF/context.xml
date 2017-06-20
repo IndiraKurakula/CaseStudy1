@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource 
+        name="jdbc/DsWebAppDB"
+        auth="Container" 
+        type="javax.sql.DataSource" 
+        username="555205" 
+        password="Tdybear@16" 
+        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+        url=" jdbc:sqlserver://CTSC00638665401/MSSQL2008R2" 
+        maxActive="8" 
+        maxIdle="4"/>
+</Context>

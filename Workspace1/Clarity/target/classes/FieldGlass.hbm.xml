@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+              "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+              "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="beans.FieldGlass" table="fieldglass">
+
+		<id name="TimeSheetID" column="Time Sheet ID" type="int">
+</id>
+		
+	<property name="StartDate" column= "Start Date" type="int" />
+	<property name= "EndDate" column=	"End Date" type="int" />
+	 <property name="Worker" column="Worker" type="string" />
+	<property name= "Site" column= "Site"	type="string" />
+	<property name= "CostCenter" column="Cost Center" type="string" />
+	<property name= "BillRateSTHr" column="Bill Rate [ST/Hr]" type="int" />
+	<property name= "BillRateOTHr" column="Bill Rate [OT/Hr]"	type="int" />
+	<property name= "BillRateDTHr" column="Bill Rate [DT/Hr]" type="int" />
+	<property name= "TimeSheetBillableHoursSTHr" column="Time Sheet Billable Hours [ST/Hr]" type="int" />
+	<property name= "TimeSheetBillableHoursOTHr" column="Time Sheet Billable Hours [OT/Hr]" type="int" />	
+	 <property name="TimeSheetBillableHoursDTHr" column="Time Sheet Billable Hours [DT/Hr]" type="int" />
+	<property name= "TimeSheetBillableHours" column="Time Sheet Billable Hours" type="int" />
+	<property name= "TimeSheetNonbillableHours" column= "Time Sheet Non-billable Hours" type="int" />
+	<property name= "Status" column="Status" type="string" />	 
+	<property name= "TimeSheetAmount" column= "Time Sheet Amount" type="int" />	
+	<property name= "CreditDebitMemoAmount" column= "Credit/Debit Memo Amount" type="int" />
+	<property name= "PerDiemAmount" column="Per Diem Amount" type="int" />
+	<property name= "NetAmount" column= "Net Amount" type="int" />
+		
+	</class>
+</hibernate-mapping>

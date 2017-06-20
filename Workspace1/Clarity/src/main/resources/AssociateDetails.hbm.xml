@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+              "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+              "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- <?xml version="1.0"?> <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate 
+	Mapping DTD 3.0//EN" "hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> -->
+
+<hibernate-mapping>
+
+	<class name="beans.AssociateDetails" table="associate_details">
+
+		<id name="AssociateID" column="AssociateID" type="int">
+		<!-- 
+		 <generator class="assigned"></generator> --> 
+</id>
+		<property name="HCSCID" column="HCSCID" type="string" />
+		<property name="AssociateName" column="AssociateName" type="string" />
+		<property name="ProjectName" column="ProjectName" type="string" />
+		<property name="Location" column="Location" type="string" />
+		<property name="OnsiteOffshore" column="OnsiteOffshore" type="string" />
+		<property name="ClarityAccess" column="ClarityAccess" type="string" />
+		<property name="HCSCEmailID" column="HCSCEmailID" type="string" />
+		<property name="PhoneNumber" column="PhoneNumber" type="string" />
+		<property name="HCSCJoiningDate" column="HCSCJoiningDate"
+			type="string" />
+		<property name="LastClarityUpdateDate" column="LastClarityUpdateDate"
+			type="string" />
+		<property name="Rate" column="Rate" type="int" />
+
+	</class>
+</hibernate-mapping>

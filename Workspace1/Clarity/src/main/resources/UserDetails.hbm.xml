@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+              "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+              "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping>
+
+	<class name="beans.UserDetails" table="user_details">
+
+		<id name="AssociateID" column="AssociateID" type="int"></id>
+		
+		<!--  <generator class="assigned"></generator>  -->
+
+		<property name="UserRole" column="UserRole" type="string" />
+		<property name="UserValue" column="UserValue" type="int" />
+		
+	</class>
+</hibernate-mapping>
