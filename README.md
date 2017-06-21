@@ -1,1 +1,1 @@
-# Case Study project
+# Case Study
